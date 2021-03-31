@@ -1,0 +1,8 @@
+#conecta na conta
+az login
+
+#Cria storageAccount
+az storage account create --resource-group AZURE-TREINAMENTO-BATCH --name storagetreinamentocli --localizacao centralus --sku Standard_LRS
+
+#Cria o azure batch
+az batch account create --name batchtreinamentocli --storage-account storagetreinamentocli --resource-group AZURE-TREINAMENTO-BATCH --location centralus
